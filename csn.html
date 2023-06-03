@@ -3,13 +3,13 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Jonathan Goni</title>
-		<link rel="stylesheet" href="style.css" >
+		<link rel="stylesheet" href="csnstyle.css" >
 	</head>
 				
 	<body>
 		<header>
 			<div class="left-header" >
-				<h1>71nthn</h1>
+				<h1 onclick="home()">71nthn</h1>
 			</div>
 			
 			<div class="middle-header" >
@@ -22,25 +22,35 @@
 			</div>
 		</header>
 		
-		<div class="content"  >		
-			<div onclick="reme()"class="images-slider-container" >
-				<div class="images-slider" >
-					<img src="images/image_1.png">
-					<img src="images/coming_soon.jpg">
-					<img src="images/coming_soon.jpg">
-					<img src="images/image_1.png">
-				</div>
+		<div class="container" >
+			<div class="header-container" >
+				<h1>Simple Reme V1</h1>
 			</div>
-			
-			<div class="description" >
-				<h1>Isi Konten Disini</h1>
-				<p>Cek menu dikanan atas</p>
+			<div class="main-container" >
+					<p class="mid-main-p">klik tombol Play untuk memulai<br>
+					<br>Peraturan :<br><br>
+					Computer 0 = Player Kalah<br>
+					Player 0 = Menang + Jumlah Bet x3<br>
+					Tie/Seri = Computer Menang</p><br>
+					<button onclick="gas(), roll()" class="button-play" >Play</button>
+					
+					<div class="play-reme" id="playreme" >
+						<div class="centerreme">
+							<p id="label" >Simple Reme</p>
+							<p id="playerOutput" >-</p>
+							<p id="computerOutput" >-</p>
+							<div class="control-button" >
+								<button id="playexit" onclick="gas()">Exit</button>
+								<button id="playagain" onclick="roll()">Play Again</button>
+							</div>
+						</div>
+					</div>
 			</div>
 		</div>
 		
 		<div class="popup" >
 			<div class="dropdown-menu" id="dropdownMenu" >
-				<p onclick="reme()">REME V1</p>
+				<p>REME V1</p>
 				<p class="unactive" >Coming Soon!</p>
 				<p class="unactive" >Coming Soon!</p>
 			</div>
@@ -83,9 +93,56 @@
 				}	
 			}
 			
-			function reme(){
-			window.open('csn.html')
+			function gas(){
+				var playreme = document.getElementById('playreme');
+				playreme.classList.toggle('aktif')
 			}
+			
+			
+			
+			let p // player
+			let a // admin
+			
+			function roll(){
+			
+			document.getElementById('playerOutput').innerHTML = `-`;
+			document.getElementById('computerOutput').innerHTML = `-`;
+			document.getElementById('label').innerHTML = `Simple Reme V1`;
+			
+			p = Math.floor(Math.random() * 10);
+			document.getElementById('playerOutput').innerHTML = `Player : ${p}`;
+			
+			setTimeout(function() {
+			
+			a = Math.floor(Math.random() * 10);
+			
+			document.getElementById('computerOutput').innerHTML = `Admin : ${a}`;
+			
+			if(a === 0){
+			a = 100;
+			document.getElementById('label').innerHTML = 'Kamu Kalah'
+			}
+			else if(p === 0){
+			p = 100;
+			document.getElementById('label').innerHTML = 'Kamu Menang + Bet X3'
+			}
+			else if(p === a){
+			document.getElementById('label').innerHTML = 'Kamu Kalah'
+			}
+			else if(a > p){
+			document.getElementById('label').innerHTML = 'Kamu Kalah'
+			}
+			else if(a < p){
+			document.getElementById('label').innerHTML = 'Kamu Menang'
+			}
+			
+			}, 1000);
+			}
+			
+			function home(){
+			window.open('index.html')
+			}
+			
 		</script>
 	</body>
 </html>
