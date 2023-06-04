@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>joo reme v2</title>
+<style type="text/css">
+.btn{padding:10px;}
+</style>
+</head>
+<body>
+	
+	<p id="p1" >P1</p>
+	<p id="p2" >P2</p>
+	<p id="a1" >A</p>
+	<h4 id="label">w / l</h4>
+	
+	<button class="btn" onclick="roll()">gas</button>
+	
+	<p id="j1" >-</p>
+	<p id="j2" >-</p>
+	<p id="j3" >-</p>
+	<p id="j4" >-</p>
+	<p id="j5" >-</p>
+	<p id="j6" >-</p>
+	<p id="j7" >-</p>
+
+	<script type="text/javascript">
+	
+let label = document.getElementById('label');
+
+let n0 = [0, 19, 28];
+let n1 = [1, 10, 29];
+let n2 = [2, 11, 20];
+let n3 = [3, 12, 21, 30];
+let n4 = [4, 13, 22, 31];
+let n5 = [5, 14, 23, 32];
+let n6 = [6, 15, 24, 33];
+let n7 = [7, 16, 25, 34];
+let n8 = [8, 17, 26, 35];
+let n9 = [9, 18, 27, 36];
+
+function roll(){
+
+let pSpin1 = Math.floor(Math.random() * 37);
+let pSpin2 = Math.floor(Math.random() * 37);
+let aSpin = Math.floor(Math.random() * 37);
+
+document.getElementById('p1').innerHTML = ('spin 1 >>> '+pSpin1);
+document.getElementById('p2').innerHTML = ('spin 2 >>> '+pSpin2);
+document.getElementById('a1').innerHTML = ('admin >>> '+aSpin);
+
+// Cocokkan nilai pSpin1 dengan array yang sesuai
+if (n0.includes(pSpin1)) {
+  pSpin1 = 10;
+} else if (n1.includes(pSpin1)) {
+  pSpin1 = 1;
+} else if (n2.includes(pSpin1)) {
+  pSpin1 = 2;
+} else if (n3.includes(pSpin1)) {
+  pSpin1 = 3;
+} else if (n4.includes(pSpin1)) {
+  pSpin1 = 4;
+} else if (n5.includes(pSpin1)) {
+  pSpin1 = 5;
+} else if (n6.includes(pSpin1)) {
+  pSpin1 = 6;
+} else if (n7.includes(pSpin1)) {
+  pSpin1 = 7;
+} else if (n8.includes(pSpin1)) {
+  pSpin1 = 8;
+} else if (n9.includes(pSpin1)) {
+  pSpin1 = 9;
+}
+
+// Cocokkan nilai pSpin2 dengan array yang sesuai
+if (n0.includes(pSpin2)) {
+  pSpin2 = 10;
+} else if (n1.includes(pSpin2)) {
+  pSpin2 = 1;
+} else if (n2.includes(pSpin2)) {
+  pSpin2 = 2;
+} else if (n3.includes(pSpin2)) {
+  pSpin2 = 3;
+} else if (n4.includes(pSpin2)) {
+  pSpin2 = 4;
+} else if (n5.includes(pSpin2)) {
+  pSpin2 = 5;
+} else if (n6.includes(pSpin2)) {
+  pSpin2 = 6;
+} else if (n7.includes(pSpin2)) {
+  pSpin2 = 7;
+} else if (n8.includes(pSpin2)) {
+  pSpin2 = 8;
+} else if (n9.includes(pSpin2)) {
+  pSpin2 = 9;
+}
+
+// Cocokkan nilai aSpin dengan array yang sesuai
+if (n0.includes(aSpin)) {
+  aSpin = 10;
+} else if (n1.includes(aSpin)) {
+  aSpin = 1;
+} else if (n2.includes(aSpin)) {
+  aSpin = 2;
+} else if (n3.includes(aSpin)) {
+  aSpin = 3;
+} else if (n4.includes(aSpin)) {
+  aSpin = 4;
+} else if (n5.includes(aSpin)) {
+  aSpin = 5;
+} else if (n6.includes(aSpin)) {
+  aSpin = 6;
+} else if (n7.includes(aSpin)) {
+  aSpin = 7;
+} else if (n8.includes(aSpin)) {
+  aSpin = 8;
+} else if (n9.includes(aSpin)) {
+  aSpin = 9;
+}
+
+	// penentuan kemenangan
+	
+	let win = false;
+	let lose = false;
+	let tie = false;
+	let res = false;
+	let x15 = false;
+	let x25 = false;
+	let x3 = false;
+	
+	label.innerHTML = ('');		
+
+	if(aSpin === 10){
+	aSpin = 0;
+	lose = true
+	}
+	else if(pSpin1 === 10 && pSpin2 === 10){
+	pSpin1 = 0;
+	pSpin2 = 0;
+	x3 = true
+	}
+	else if(pSpin1 === 10 || pSpin2 === 10){
+	x15F()
+	}
+	else if(pSpin1 > aSpin && pSpin2 > aSpin){
+	win = true
+	}
+	else if(pSpin1 > aSpin || pSpin2 > aSpin){
+	res = true
+	}
+	else if(pSpin1 < aSpin && pSpin2 < aSpin){
+	lose = true
+	}
+	else if(pSpin1 === aSpin || pSpin2 === aSpin){
+	loseCek()
+	}
+	
+		function loseCek(){
+		if(pSpin1 === aSpin && pSpin2 < aSpin){
+		lose = true;
+		}
+		if(pSpin1 < aSpin && pSpin2 === aSpin){
+		lose = true
+		}}
+	
+		function x15F(){
+		if (pSpin1 > aSpin && pSpin2 > aSpin){
+		x25 = true
+		}
+		else if(pSpin1 <= aSpin || pSpin2 <= aSpin){
+		x15 = true
+		}}
+		
+	let j1 = document.getElementById('j1')
+	let j2 = document.getElementById('j2')
+	let j3 = document.getElementById('j3')
+	let j4 = document.getElementById('j4')
+	let j5 = document.getElementById('j5')
+	let j6 = document.getElementById('j6')
+	let j7 = document.getElementById('j7')
+
+	/*console.log('win'+win);
+	console.log('lose'+lose);
+	console.log('tie'+tie);
+	console.log('res'+res);
+	console.log('x1.5'+x15);
+	console.log('x2.5'+x25);
+	console.log('x3'+x3);*/
+	
+	j1.innerHTML = ('win '+win);
+	j2.innerHTML = ('lose '+lose);
+	j3.innerHTML = ('tie '+tie);
+	j4.innerHTML = ('res '+res);
+	j5.innerHTML = ('x1.5 '+x15);
+	j6.innerHTML = ('x2.5 '+x25);
+	j7.innerHTML = ('x3 '+x3);
+	
+}
+	</script>
+</body>
+</html>
