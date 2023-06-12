@@ -1,0 +1,233 @@
+*, html, body {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family:Verdana,Arial,sans-serif;
+}
+body {
+padding:20px;
+}
+p {
+font-size:20px;
+font-weight:200;
+}
+a {
+text-decoration:none;
+font-size:19px;
+color:#1878f3;
+font-weight:500;
+}
+.input-container {
+display:flex;
+flex-direction:column;
+}
+.input-container img {
+width:100px;
+align-self:center;
+}
+.input-box {
+display:flex;
+width:100%;
+flex-direction:column;
+}
+#inputPw {
+align-self:center;
+display:block;
+width:100%;
+height:55px;
+border:1px solid #dbdbdb;
+border-radius:5px;
+font-size:20px;
+padding:0 0 0 10px;
+margin:0 0 10px 0;
+outline:none;
+}
+#inputPw:hover,
+#inputPw:active {
+border:2px solid #1878f3;
+}
+.showPw {
+margin:0 0 50px 3px;
+display:flex;
+align-items:center;
+}
+.showPw label {
+margin:0 0 -2px 0;
+}
+#showPw {
+width:20px;
+height:20px;
+margin:0 20px 0 0;
+}
+.input-container h1 {
+font-size:30px;
+font-weight:400;
+text-align:center;
+margin:0 0 10px 0;
+}
+.control {
+align-items:center;
+display:flex;
+justify-content:space-between;
+}
+.control button {
+font-size:20px;
+font-weight:500;
+border:0;
+border-radius:5px;
+}
+.create {
+background-color:#fff;
+color:#1878f3;
+}
+.next  {
+background-color:#1878f3;
+color:#fff;
+padding:10px 25px 10px 25px;
+}
+.account-info {
+display:flex;
+margin:auto;
+margin-bottom:50px;
+padding:3px;
+align-items:center;
+justify-content:center;
+border-radius:15px;
+border:1px solid lightgray;
+}
+#username {
+font-size:17px;
+font-weight:400;
+color:#111;
+align-self:center;
+padding:0 5px 0 0;
+margin:0;
+}
+.profile-img {
+width:20px;
+height:20px;
+margin:0 5px 0 0;
+}
+#inputId {
+display:none;
+}
+label {
+font-size:20px;
+color:#666;
+}
+
+@media only screen and (min-width:600px) {
+*, html, body {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family:Verdana,Arial,sans-serif;
+}
+body {
+padding:40px;
+}
+p {
+font-size:40px;
+font-weight:200;
+}
+a {
+text-decoration:none;
+font-size:38px;
+color:#1878f3;
+font-weight:500;
+}
+.input-container {
+display:flex;
+flex-direction:column;
+}
+.input-container img {
+width:200px;
+align-self:center;
+}
+.input-box {
+display:flex;
+width:100%;
+flex-direction:column;
+}
+#inputPw {
+align-self:center;
+display:block;
+width:100%;
+height:130px;
+border:1px solid #dbdbdb;
+border-radius:10px;
+font-size:40px;
+padding:0 0 0 20px;
+margin:0 0 20px 0;
+outline:none;
+}
+#inputPw:hover,
+#inputPw:active {
+border:4px solid #1878f3;
+}
+.showPw {
+margin:0 0 100px 6px;
+display:flex;
+align-items:center;
+}
+.showPw label {
+margin:0 0 -4px 0;
+}
+#showPw {
+width:40px;
+height:40px;
+margin:0 40px 0 0;
+}
+.input-container h1 {
+font-size:60px;
+font-weight:400;
+text-align:center;
+margin:0 0 20px 0;
+}
+.control {
+align-items:center;
+display:flex;
+justify-content:space-between;
+}
+.control button {
+font-size:40px;
+font-weight:500;
+border:0;
+border-radius:10px;
+}
+.create {
+background-color:#fff;
+color:#1878f3;
+}
+.next  {
+background-color:#1878f3;
+color:#fff;
+padding:20px 50px 20px 50px;
+}
+.account-info {
+display:flex;
+margin:auto;
+margin-bottom:100px;
+padding:6px;
+align-items:center;
+justify-content:center;
+border-radius:30px;
+border:2px solid lightgray;
+}
+#username {
+font-size:34px;
+font-weight:400;
+color:#111;
+align-self:center;
+padding:0 10px 0 0;
+margin:0;
+}
+.profile-img {
+width:40px;
+height:40px;
+margin:0 10px 0 0;
+}
+label {
+font-size:40px;
+}
+}

@@ -129,3 +129,141 @@ color:gray;
 a {
 text-decoration:none;
 }
+
+@media only screen and (min-width:600px){
+
+*, html, body {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family:Verdana,Arial,sans-serif;
+}
+p {
+font-size: 30px;
+}
+body {
+background-color:#fff;
+}
+header {
+height:100px;
+display:flex;
+justify-content:left;
+align-items:center;
+background-color:lightyellow;
+color:#1878F3;
+}
+.phone-icon {
+margin:0 4px 0 14px;
+width:50px;
+height:50px;
+}
+.input-container {
+margin:30px 0 0 0;
+display:flex;
+flex-direction:column;
+align-items:center;
+width:100%;
+}
+.facebook-text-logo {
+width:200px;
+align-self:center;
+margin:0 0 40px 0;
+}
+.input-box {
+width:100%;
+display:flex;
+align-items:center;
+flex-direction:column;
+}
+.input {
+border-radius:10px;
+width:90%;
+height:80px;
+margin:0 0 14px 0;
+background-color:#f5f6f8;
+border:2px solid rgba(150,150,150,0.2);
+box-shadow:1px 1px rgba(150,150,150,0.2);
+padding:0 0 0 20px;
+font-size:34px;
+}
+.submit {
+margin:6px 0 0 0;
+width:90%;
+height:90px;
+border-radius:10px;
+border:0;
+background-color:#1878f3;
+color:#fff;
+font-size:40px;
+font-weight:700;
+}
+.input-box p {
+color:#1878f3;
+margin:30px 0 30px 0;
+z-index:2;
+}
+.input-hr {
+margin:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+width:100%;
+}
+.input-hr hr {
+width:90%;
+height:2px;
+}
+.input-hr p {
+text-align:center;
+position:fixed;
+left:auto;
+padding:10px 30px 10px 30px;
+background-color:#fff;
+color:#000;
+z-index:1;
+}
+.cna {
+margin:20px 0 0 0;
+width:70%;
+height:90px;
+background-color:#fff;
+border-radius:10px;
+border:2px solid lightgray;
+font-size:40px;
+font-weight:500;
+}
+.information {
+width:70%;
+margin:300px 0 0 0;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+.information p {
+text-align:center;
+color:#61708d;
+}
+.info1 p,.info2 p {
+margin:6px;
+}
+.info2 {
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+.add-lang{
+display:flex;
+align-items:center;
+padding:0 12px 0 12px;
+font-size:50px;
+font-weight:400;
+border:2px solid #61708d;
+border-radius:6px;
+}
+.meta {
+color:gray;
+}
+a {
+text-decoration:none;
+}
+}

